@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F54F55472CBE725600B21D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55462CBE725600B21D52 /* AppDelegate.swift */; };
+		F54F55492CBE725600B21D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55482CBE725600B21D52 /* SceneDelegate.swift */; };
+		F54F554B2CBE725600B21D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F554A2CBE725600B21D52 /* ViewController.swift */; };
+		F54F554E2CBE725600B21D52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F54F554D2CBE725600B21D52 /* Base */; };
+		F54F55502CBE725700B21D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54F554F2CBE725700B21D52 /* Assets.xcassets */; };
+		F54F55532CBE725700B21D52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F54F55522CBE725700B21D52 /* Base */; };
+		F54F555E2CBE725700B21D52 /* CyptoCoinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */; };
+		F54F55682CBE725700B21D52 /* CyptoCoinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55672CBE725700B21D52 /* CyptoCoinsUITests.swift */; };
+		F54F556A2CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55692CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F54F555A2CBE725700B21D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F54F553B2CBE725600B21D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54F55422CBE725600B21D52;
+			remoteInfo = CyptoCoins;
+		};
+		F54F55642CBE725700B21D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F54F553B2CBE725600B21D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54F55422CBE725600B21D52;
+			remoteInfo = CyptoCoins;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F54F55432CBE725600B21D52 /* CyptoCoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyptoCoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54F55462CBE725600B21D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F54F55482CBE725600B21D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F54F554A2CBE725600B21D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F54F554D2CBE725600B21D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F54F554F2CBE725700B21D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F54F55522CBE725700B21D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F54F55542CBE725700B21D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54F55592CBE725700B21D52 /* CyptoCoinsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCoinsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsTests.swift; sourceTree = "<group>"; };
+		F54F55632CBE725700B21D52 /* CyptoCoinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCoinsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54F55672CBE725700B21D52 /* CyptoCoinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsUITests.swift; sourceTree = "<group>"; };
+		F54F55692CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F54F55402CBE725600B21D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F55562CBE725700B21D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F55602CBE725700B21D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F54F553A2CBE725600B21D52 = {
+			isa = PBXGroup;
+			children = (
+				F54F55452CBE725600B21D52 /* CyptoCoins */,
+				F54F555C2CBE725700B21D52 /* CyptoCoinsTests */,
+				F54F55662CBE725700B21D52 /* CyptoCoinsUITests */,
+				F54F55442CBE725600B21D52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F54F55442CBE725600B21D52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F54F55432CBE725600B21D52 /* CyptoCoins.app */,
+				F54F55592CBE725700B21D52 /* CyptoCoinsTests.xctest */,
+				F54F55632CBE725700B21D52 /* CyptoCoinsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F54F55452CBE725600B21D52 /* CyptoCoins */ = {
+			isa = PBXGroup;
+			children = (
+				F54F55462CBE725600B21D52 /* AppDelegate.swift */,
+				F54F55482CBE725600B21D52 /* SceneDelegate.swift */,
+				F54F554A2CBE725600B21D52 /* ViewController.swift */,
+				F54F554C2CBE725600B21D52 /* Main.storyboard */,
+				F54F554F2CBE725700B21D52 /* Assets.xcassets */,
+				F54F55512CBE725700B21D52 /* LaunchScreen.storyboard */,
+				F54F55542CBE725700B21D52 /* Info.plist */,
+			);
+			path = CyptoCoins;
+			sourceTree = "<group>";
+		};
+		F54F555C2CBE725700B21D52 /* CyptoCoinsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */,
+			);
+			path = CyptoCoinsTests;
+			sourceTree = "<group>";
+		};
+		F54F55662CBE725700B21D52 /* CyptoCoinsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F54F55672CBE725700B21D52 /* CyptoCoinsUITests.swift */,
+				F54F55692CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift */,
+			);
+			path = CyptoCoinsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F54F55422CBE725600B21D52 /* CyptoCoins */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54F556D2CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoins" */;
+			buildPhases = (
+				F54F553F2CBE725600B21D52 /* Sources */,
+				F54F55402CBE725600B21D52 /* Frameworks */,
+				F54F55412CBE725600B21D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CyptoCoins;
+			productName = CyptoCoins;
+			productReference = F54F55432CBE725600B21D52 /* CyptoCoins.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F54F55582CBE725700B21D52 /* CyptoCoinsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54F55702CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoinsTests" */;
+			buildPhases = (
+				F54F55552CBE725700B21D52 /* Sources */,
+				F54F55562CBE725700B21D52 /* Frameworks */,
+				F54F55572CBE725700B21D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54F555B2CBE725700B21D52 /* PBXTargetDependency */,
+			);
+			name = CyptoCoinsTests;
+			productName = CyptoCoinsTests;
+			productReference = F54F55592CBE725700B21D52 /* CyptoCoinsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F54F55622CBE725700B21D52 /* CyptoCoinsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54F55732CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoinsUITests" */;
+			buildPhases = (
+				F54F555F2CBE725700B21D52 /* Sources */,
+				F54F55602CBE725700B21D52 /* Frameworks */,
+				F54F55612CBE725700B21D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54F55652CBE725700B21D52 /* PBXTargetDependency */,
+			);
+			name = CyptoCoinsUITests;
+			productName = CyptoCoinsUITests;
+			productReference = F54F55632CBE725700B21D52 /* CyptoCoinsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F54F553B2CBE725600B21D52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F54F55422CBE725600B21D52 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					F54F55582CBE725700B21D52 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F54F55422CBE725600B21D52;
+					};
+					F54F55622CBE725700B21D52 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F54F55422CBE725600B21D52;
+					};
+				};
+			};
+			buildConfigurationList = F54F553E2CBE725600B21D52 /* Build configuration list for PBXProject "CyptoCoins" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F54F553A2CBE725600B21D52;
+			productRefGroup = F54F55442CBE725600B21D52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F54F55422CBE725600B21D52 /* CyptoCoins */,
+				F54F55582CBE725700B21D52 /* CyptoCoinsTests */,
+				F54F55622CBE725700B21D52 /* CyptoCoinsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F54F55412CBE725600B21D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54F55502CBE725700B21D52 /* Assets.xcassets in Resources */,
+				F54F55532CBE725700B21D52 /* Base in Resources */,
+				F54F554E2CBE725600B21D52 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F55572CBE725700B21D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F55612CBE725700B21D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F54F553F2CBE725600B21D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54F554B2CBE725600B21D52 /* ViewController.swift in Sources */,
+				F54F55472CBE725600B21D52 /* AppDelegate.swift in Sources */,
+				F54F55492CBE725600B21D52 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F55552CBE725700B21D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54F555E2CBE725700B21D52 /* CyptoCoinsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54F555F2CBE725700B21D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54F55682CBE725700B21D52 /* CyptoCoinsUITests.swift in Sources */,
+				F54F556A2CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F54F555B2CBE725700B21D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54F55422CBE725600B21D52 /* CyptoCoins */;
+			targetProxy = F54F555A2CBE725700B21D52 /* PBXContainerItemProxy */;
+		};
+		F54F55652CBE725700B21D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54F55422CBE725600B21D52 /* CyptoCoins */;
+			targetProxy = F54F55642CBE725700B21D52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F54F554C2CBE725600B21D52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F54F554D2CBE725600B21D52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F54F55512CBE725700B21D52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F54F55522CBE725700B21D52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F54F556B2CBE725700B21D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F54F556C2CBE725700B21D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F54F556E2CBE725700B21D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CyptoCoins/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F54F556F2CBE725700B21D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CyptoCoins/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F54F55712CBE725700B21D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyptoCoins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyptoCoins";
+			};
+			name = Debug;
+		};
+		F54F55722CBE725700B21D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyptoCoins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyptoCoins";
+			};
+			name = Release;
+		};
+		F54F55742CBE725700B21D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyptoCoins;
+			};
+			name = Debug;
+		};
+		F54F55752CBE725700B21D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyptoCoins;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F54F553E2CBE725600B21D52 /* Build configuration list for PBXProject "CyptoCoins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54F556B2CBE725700B21D52 /* Debug */,
+				F54F556C2CBE725700B21D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54F556D2CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54F556E2CBE725700B21D52 /* Debug */,
+				F54F556F2CBE725700B21D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54F55702CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoinsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54F55712CBE725700B21D52 /* Debug */,
+				F54F55722CBE725700B21D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54F55732CBE725700B21D52 /* Build configuration list for PBXNativeTarget "CyptoCoinsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54F55742CBE725700B21D52 /* Debug */,
+				F54F55752CBE725700B21D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F54F553B2CBE725600B21D52 /* Project object */;
+}
