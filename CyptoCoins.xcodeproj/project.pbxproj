@@ -19,6 +19,9 @@
 		F54F55792CBE728F00B21D52 /* DashBoardAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55782CBE728F00B21D52 /* DashBoardAPIRepository.swift */; };
 		F54F557B2CBE759D00B21D52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F557A2CBE759D00B21D52 /* NetworkManager.swift */; };
 		F5B747CD2CBE8EA3008AA053 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747CC2CBE8EA3008AA053 /* DashboardTableViewCell.swift */; };
+		F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D42CBECF6F008AA053 /* CoinsFilterViewController.swift */; };
+		F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D62CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift */; };
+		F5B747D92CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D82CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		F54F55782CBE728F00B21D52 /* DashBoardAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardAPIRepository.swift; sourceTree = "<group>"; };
 		F54F557A2CBE759D00B21D52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F5B747CC2CBE8EA3008AA053 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		F5B747D42CBECF6F008AA053 /* CoinsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterViewController.swift; sourceTree = "<group>"; };
+		F5B747D62CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5B747D82CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,7 @@
 				F54F55462CBE725600B21D52 /* AppDelegate.swift */,
 				F54F55482CBE725600B21D52 /* SceneDelegate.swift */,
 				F5B747D02CBEA36A008AA053 /* DashBoard */,
-				F54F55782CBE728F00B21D52 /* DashBoardAPIRepository.swift */,
+				F5B747DA2CBEEADD008AA053 /* CoinsFilter */,
 				F54F557A2CBE759D00B21D52 /* NetworkManager.swift */,
 				F54F554F2CBE725700B21D52 /* Assets.xcassets */,
 				F54F55512CBE725700B21D52 /* LaunchScreen.storyboard */,
@@ -153,6 +159,7 @@
 		F5B747D02CBEA36A008AA053 /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				F5B747DE2CBEEB08008AA053 /* Repos */,
 				F5B747CF2CBEA34C008AA053 /* ViewModel */,
 				F5B747D12CBEA39C008AA053 /* Views */,
 				F5B747CE2CBEA343008AA053 /* Controller */,
@@ -166,6 +173,48 @@
 				F5B747CC2CBE8EA3008AA053 /* DashboardTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F5B747DA2CBEEADD008AA053 /* CoinsFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747DB2CBEEAE6008AA053 /* controller */,
+				F5B747DC2CBEEAEE008AA053 /* viewmodel */,
+				F5B747DD2CBEEAFD008AA053 /* views */,
+			);
+			path = CoinsFilter;
+			sourceTree = "<group>";
+		};
+		F5B747DB2CBEEAE6008AA053 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747D42CBECF6F008AA053 /* CoinsFilterViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F5B747DC2CBEEAEE008AA053 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747D82CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		F5B747DD2CBEEAFD008AA053 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747D62CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F5B747DE2CBEEB08008AA053 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				F54F55782CBE728F00B21D52 /* DashBoardAPIRepository.swift */,
+			);
+			path = Repos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54F557B2CBE759D00B21D52 /* NetworkManager.swift in Sources */,
+				F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */,
+				F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */,
 				F54F55792CBE728F00B21D52 /* DashBoardAPIRepository.swift in Sources */,
 				F54F554B2CBE725600B21D52 /* DashBoardViewController.swift in Sources */,
+				F5B747D92CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift in Sources */,
 				F54F55472CBE725600B21D52 /* AppDelegate.swift in Sources */,
 				F54F55492CBE725600B21D52 /* SceneDelegate.swift in Sources */,
 				F54F55772CBE727500B21D52 /* DashBoardViewModel.swift in Sources */,

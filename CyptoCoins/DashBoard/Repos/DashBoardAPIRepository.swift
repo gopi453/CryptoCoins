@@ -26,26 +26,16 @@ struct DashboardData: Codable {
     }
 
     var coinImage: String {
-        if !isActive {
-            //dot image with new banner
-        }
-        if isNew {
-            //black with new banner
-        }
         switch type {
         case .coin:
-            if isActive {
-                //yellow coin
-
-            }
-
+                return isActive ? "is_active_coin" : "is_inactive_coin"
         case .token:
-            if isActive {
-                //black coin
-
-            }
+            return "is_active_token"
         }
-        return ""
+    }
+
+    var bannerImage: String? {
+        isNew ? "is_new" : nil
     }
 }
 

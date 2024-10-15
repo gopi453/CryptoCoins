@@ -22,7 +22,7 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
         let containerStackView = UIStackView()
         containerStackView.alignment = .center
         containerStackView.isLayoutMarginsRelativeArrangement = true
-        containerStackView.layoutMargins = .init(top: 8, left: 8, bottom: 8, right: 8)
+        containerStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
         return containerStackView
     }()
 
@@ -44,8 +44,17 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
     }()
     private lazy var coinImageView: UIImageView = {
         let coinImageView = UIImageView()
+        coinImageView.contentMode = .redraw
         return coinImageView
     }()
+
+    private lazy var bannerImageView: UIImageView = {
+        let bannerImageView = UIImageView()
+        bannerImageView.contentMode = .scaleAspectFit
+        bannerImageView.translatesAutoresizingMaskIntoConstraints = false
+        return bannerImageView
+    }()
+
     var dashBoardData: DashboardData? {
         didSet {
             self.setData()
@@ -66,8 +75,15 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.bannerImageView.image = nil
+        self.coinImageView.image = nil
+    }
+
     private func setup() {
+        selectionStyle = .none
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.addArrangedSubview(titleLabel)
         contentStackView.addArrangedSubview(subTitleLabel)
@@ -75,12 +91,19 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
         containerStackView.addArrangedSubview(contentStackView)
         containerStackView.addArrangedSubview(spacer)
         containerStackView.addArrangedSubview(coinImageView)
+        coinImageView.addSubview(bannerImageView)
         self.contentView.addSubview(containerStackView)
         NSLayoutConstraint.activate([
             self.containerStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0),
             self.containerStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0),
             self.containerStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0),
-            self.containerStackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0)
+            self.containerStackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
+            coinImageView.widthAnchor.constraint(equalToConstant: 56),
+            coinImageView.heightAnchor.constraint(equalToConstant: 56),
+            self.bannerImageView.leadingAnchor.constraint(equalTo: self.coinImageView.leadingAnchor, constant: 0),
+            self.bannerImageView.trailingAnchor.constraint(equalTo: self.coinImageView.trailingAnchor, constant: 0),
+            self.bannerImageView.topAnchor.constraint(equalTo: self.coinImageView.topAnchor, constant: 0),
+            self.bannerImageView.bottomAnchor.constraint(equalTo: self.coinImageView.bottomAnchor, constant: 0),
         ])
     }
 
@@ -89,6 +112,10 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
         self.titleLabel.text = dashBoardData.name
         self.subTitleLabel.text = dashBoardData.symbol
         self.coinImageView.image = UIImage(named: dashBoardData.coinImage)
+        self.bannerImageView.isHidden = !dashBoardData.isNew
+        if let bannerImage = dashBoardData.bannerImage {
+            self.bannerImageView.image = UIImage.init(named: bannerImage)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

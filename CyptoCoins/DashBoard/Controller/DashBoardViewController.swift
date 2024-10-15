@@ -21,10 +21,37 @@ class DashBoardViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.title = "COIN"
+        self.setNavigationAppearance()
+        self.setRightBarButtonItem()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setRightBarButtonItem() {
+        let rightBarButtonItem = UIBarButtonItem(title: nil, image: .init(systemName: "magnifyingglass"), target: self, action: #selector(searchButtonTapped))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+
+    @objc func searchButtonTapped(_ sender: UIBarButtonItem) {
+        showFilterViewControllerInACustomizedSheet()
+    }
+
+    func showFilterViewControllerInACustomizedSheet() {
+        let filterViewModel = CoinsFilterCollectionViewModel()
+        let filterController = CoinsFilterViewController(viewModel: filterViewModel)
+
+        if let sheet = filterController.sheetPresentationController {
+            sheet.detents = [.custom(resolver: { [weak self] context in
+                (self?.view.frame.size.height ?? 0) * 0.2
+            })]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(filterController, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
