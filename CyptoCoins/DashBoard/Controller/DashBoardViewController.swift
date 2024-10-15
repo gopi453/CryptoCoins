@@ -39,7 +39,7 @@ class DashBoardViewController: UIViewController {
     }
 
     func showFilterViewControllerInACustomizedSheet() {
-        let filterViewModel = CoinsFilterCollectionViewModel()
+        let filterViewModel = CoinsFilterViewModel()
         let filterController = CoinsFilterViewController(viewModel: filterViewModel)
 
         if let sheet = filterController.sheetPresentationController {

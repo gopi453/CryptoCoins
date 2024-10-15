@@ -6,7 +6,7 @@
 //
 
 import UIKit
-enum CoinFilterOptions: CaseIterable, CustomStringConvertible {
+enum CoinFilterOptions: Codable, CaseIterable, CustomStringConvertible {
     case activeCoins, inactiveCoins, onlyTokens, onlyCoins, newCoins
     var description: String {
         switch self {
@@ -24,14 +24,9 @@ enum CoinFilterOptions: CaseIterable, CustomStringConvertible {
     }
 }
 
-struct CoinsFilterCollectionData: Hashable {
+struct CoinsFilterCollectionData: Codable, Hashable {
     var isSelected: Bool = false
     let value: CoinFilterOptions
-    static var mockData: [CoinsFilterCollectionData] {
-        CoinFilterOptions.allCases.compactMap({
-            CoinsFilterCollectionData.init(value: $0)
-        })
-    }
 }
 
 class CoinsFilterCollectionViewCell: UICollectionViewCell, ReusableCell {

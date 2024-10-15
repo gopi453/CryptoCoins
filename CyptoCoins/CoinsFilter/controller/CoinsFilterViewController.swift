@@ -10,7 +10,7 @@ enum CoinsFilterSection: Hashable {
     case all
 }
 class CoinsFilterViewController: UIViewController {
-    private var viewModel: CoinsFilterCollectionViewModel?
+    private var viewModel: CoinsFilterViewModel?
     private typealias Snapshot = NSDiffableDataSourceSnapshot<CoinsFilterSection, CoinsFilterCollectionData>
     private typealias DataSource = UICollectionViewDiffableDataSource<CoinsFilterSection, CoinsFilterCollectionData>
     private lazy var dataSource = configureDataSource()
@@ -23,7 +23,7 @@ class CoinsFilterViewController: UIViewController {
         return collectionView
     }()
 
-    init(viewModel: CoinsFilterCollectionViewModel? = nil) {
+    init(viewModel: CoinsFilterViewModel? = nil) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -67,7 +67,6 @@ private extension CoinsFilterViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 15
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-
         return UICollectionViewCompositionalLayout(section: section)
     }
 

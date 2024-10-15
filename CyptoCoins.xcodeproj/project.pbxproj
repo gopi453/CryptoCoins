@@ -22,6 +22,7 @@
 		F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D42CBECF6F008AA053 /* CoinsFilterViewController.swift */; };
 		F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D62CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift */; };
 		F5B747D92CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747D82CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift */; };
+		F5B747E02CBEEF4E008AA053 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747DF2CBEEF4E008AA053 /* LocalStorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F5B747D42CBECF6F008AA053 /* CoinsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterViewController.swift; sourceTree = "<group>"; };
 		F5B747D62CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5B747D82CBED1D9008AA053 /* CoinsFilterCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterCollectionViewModel.swift; sourceTree = "<group>"; };
+		F5B747DF2CBEEF4E008AA053 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F54F55462CBE725600B21D52 /* AppDelegate.swift */,
+				F5B747DF2CBEEF4E008AA053 /* LocalStorageManager.swift */,
 				F54F55482CBE725600B21D52 /* SceneDelegate.swift */,
 				F5B747D02CBEA36A008AA053 /* DashBoard */,
 				F5B747DA2CBEEADD008AA053 /* CoinsFilter */,
@@ -349,6 +352,7 @@
 			files = (
 				F54F557B2CBE759D00B21D52 /* NetworkManager.swift in Sources */,
 				F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */,
+				F5B747E02CBEEF4E008AA053 /* LocalStorageManager.swift in Sources */,
 				F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */,
 				F54F55792CBE728F00B21D52 /* DashBoardAPIRepository.swift in Sources */,
 				F54F554B2CBE725600B21D52 /* DashBoardViewController.swift in Sources */,
