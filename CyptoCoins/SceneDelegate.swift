@@ -53,25 +53,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
-}
-
-extension UIViewController {
-    func setNavigationAppearance() {
-        if #available(iOS 15, *) {
-            // MARK: Navigation bar appearance
-            let navigationBarAppearance = UINavigationBarAppearance()
-            navigationBarAppearance.configureWithOpaqueBackground()
-            navigationBarAppearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor : UIColor.white
-            ]
-            let offset = UIOffset(horizontal: -CGFloat.greatestFiniteMagnitude, vertical: 0)
-            navigationBarAppearance.titlePositionAdjustment = offset
-            navigationBarAppearance.backgroundColor = UIColor.init(red: 86 / 255, green: 12 / 255, blue: 225 / 255, alpha: 1)
-            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
-            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
-            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-        }
-    }
 }
 

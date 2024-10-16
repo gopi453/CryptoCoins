@@ -5,10 +5,12 @@
 //  Created by K Gopi on 16/10/24.
 //
 
-import Foundation
+import UIKit
 
 struct Utility {
-    
+
+    static let appThemeColor: UIColor = .init(red: 86 / 255, green: 12 / 255, blue: 225 / 255, alpha: 1)
+
     static func fetchLocalArrayData<T: Decodable>(from store: LocalStorable = LocalStorageManager(), for fileName: String, with fileExtension: String = "json", decodeType: [T].Type) -> [T]? {
         guard let data = store.readData(for: .fileName(fileName, fileExtension), decodeType: decodeType), !data.isEmpty else {
             return nil

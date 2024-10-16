@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50651642CBF8D4D00C442BE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50651632CBF8D4D00C442BE /* UIViewController+Extensions.swift */; };
 		F54F55472CBE725600B21D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55462CBE725600B21D52 /* AppDelegate.swift */; };
 		F54F55492CBE725600B21D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55482CBE725600B21D52 /* SceneDelegate.swift */; };
 		F54F554B2CBE725600B21D52 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F554A2CBE725600B21D52 /* DashBoardViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F50651632CBF8D4D00C442BE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		F54F55432CBE725600B21D52 /* CyptoCoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyptoCoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54F55462CBE725600B21D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F54F55482CBE725600B21D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				F5B747E52CBF7175008AA053 /* UITableView+Extensions.swift */,
 				F5B747F12CBF8B80008AA053 /* String+Extensions.swift */,
+				F50651632CBF8D4D00C442BE /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */,
 				F5B747E02CBEEF4E008AA053 /* LocalStorageManager.swift in Sources */,
 				F5B747F22CBF8B80008AA053 /* String+Extensions.swift in Sources */,
+				F50651642CBF8D4D00C442BE /* UIViewController+Extensions.swift in Sources */,
 				F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */,
 				F54F55792CBE728F00B21D52 /* DashBoardAPIRepository.swift in Sources */,
 				F5B747E42CBF6E21008AA053 /* CoinDataModels.swift in Sources */,

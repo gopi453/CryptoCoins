@@ -12,10 +12,9 @@ class DashBoardViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableview = UITableView()
         tableview.separatorStyle = .singleLine
-        tableview.delegate = self
-        tableview.dataSource = self
         return tableview
     }()
+    private var activityIndicator: UIActivityIndicatorView?
 
     init(viewModel: DashBoardViewModel?) {
         self.viewModel = viewModel
@@ -29,31 +28,8 @@ class DashBoardViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setRightBarButtonItem() {
-        let rightBarButtonItem = UIBarButtonItem(title: nil, image: .init(systemName: "magnifyingglass"), target: self, action: #selector(searchButtonTapped))
-        rightBarButtonItem.tintColor = .white
-        self.navigationItem.rightBarButtonItem = rightBarButtonItem
-    }
-
     @objc func searchButtonTapped(_ sender: UIBarButtonItem) {
-        showFilterViewControllerInACustomizedSheet()
-    }
-
-    func showFilterViewControllerInACustomizedSheet() {
-        let filterViewModel = CoinsFilterViewModel()
-        let filterController = CoinsFilterViewController(viewModel: filterViewModel, delegate: self)
-        let filterNavController = UINavigationController(rootViewController: filterController)
-
-        if let sheet = filterNavController.sheetPresentationController {
-            sheet.detents = [.custom(resolver: { [weak self] context in
-                (self?.view.frame.size.height ?? 0) * 0.2
-            })]
-            sheet.largestUndimmedDetentIdentifier = .medium
-            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            sheet.prefersEdgeAttachedInCompactHeight = true
-            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
-        }
-        present(filterNavController, animated: true, completion: nil)
+        showFilterViewController()
     }
 
     override func viewDidLoad() {
@@ -63,7 +39,16 @@ class DashBoardViewController: UIViewController {
         registerTableCells()
     }
 
-    private func setup() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        activityIndicator = self.showActivityIndicator(onView: view)
+        viewModel?.getData()
+    }
+
+}
+
+private extension DashBoardViewController {
+    func setup() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -75,24 +60,61 @@ class DashBoardViewController: UIViewController {
         viewModel?.setDelegate(delegate: self)
     }
 
-    private func registerTableCells() {
+    func setRightBarButtonItem() {
+        let rightBarButtonItem = UIBarButtonItem(title: nil, image: .init(systemName: "magnifyingglass"), target: self, action: #selector(searchButtonTapped))
+        rightBarButtonItem.tintColor = .white
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        rightBarButtonItem.isEnabled = false
+    }
+
+    func setTableDelegate() {
+        if tableView.delegate == nil,
+           tableView.dataSource == nil {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+
+    func registerTableCells() {
         self.tableView.register(DashboardTableViewCell.self, forCellReuseIdentifier: DashboardTableViewCell.reuseIdentifier)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel?.getData()
+    func showFilterViewController() {
+        let filterViewModel = CoinsFilterViewModel()
+        let filterController = CoinsFilterViewController(viewModel: filterViewModel, delegate: self)
+        let filterNavController = UINavigationController(rootViewController: filterController)
+
+        if let sheet = filterNavController.sheetPresentationController {
+            sheet.detents = [.custom(resolver: { [weak self] context in
+                180
+            })]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(filterNavController, animated: true, completion: nil)
+    }
+}
+
+extension DashBoardViewController: ViewModelDelegate {
+
+    func reloadTable() {
+        setTableDelegate()
+        if let activityIndicator {
+            self.removeActivityIndicator(activityIndicator)
+        }
+        tableView.reloadData()
+        self.navigationItem.rightBarButtonItem?.isEnabled = viewModel?.dashBoardData.isEmpty == false
     }
 
-}
-extension DashBoardViewController: ViewModelDelegate {
     func didreceiveSuccessResponse() {
-        tableView.reloadData()
+        reloadTable()
     }
-    
+
     func didreceiveFailResponse(with error: any Error) {
         //failure
-        print(error)
+        reloadTable()
     }
 }
 
