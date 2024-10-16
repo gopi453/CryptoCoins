@@ -16,7 +16,15 @@ struct DashBoardRequest: RequestBuilder {
 }
 
 struct DashBoardRepository: DashBoardAPIRepository {
+    private let localCache: LocalStorable
+    init(localCache: LocalStorable = LocalStorageManager()) {
+        self.localCache = localCache
+    }
+
     func fetchCryptoCoins(from request: RequestBuilder) async throws -> [DashboardData] {
-        try await NetworkManager.shared().makeRequest(from: request, decodeType: [DashboardData].self)
+        if let data = localCache.readData(for: .dashboard, fileExtension: .json, decodeType: [DashboardData].self), !data.isEmpty {
+            return data
+        }
+        return try await NetworkManager.shared().makeRequest(from: request, decodeType: [DashboardData].self)
     }
 }

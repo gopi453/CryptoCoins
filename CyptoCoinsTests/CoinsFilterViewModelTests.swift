@@ -25,7 +25,19 @@ final class CoinsFilterViewModelTests: XCTestCase {
 
     func testWriteOperation() {
         viewModel.writeData(with: [.init(isSelected: true, value: .activeCoins)])
-        XCTAssertTrue(Utility.checkFileExists(for: "coinsFilterData", with: "json"), "No file present")
+        XCTAssertTrue(Utility.checkFileExists(for: .coinsFilter, with: .json), "No file present")
+        viewModel.writeData(with: [.init(isSelected: true, value: .inactiveCoins), .init(isSelected: false, value: .onlyTokens)])
+        XCTAssertFalse(Utility.checkFileExists(for: .custom("CustomValue"), with: .json), "No file present")
+    }
+
+    func testFileExistence() {
+        XCTAssert(Utility.checkFileExists(for: .custom("//*"), with: .rich) == false)
+        XCTAssertFalse(Utility.checkFileExists(for: .coinsFilter, with: .text), "No file present")
+        XCTAssertFalse(Utility.checkFileExists(for: .dashboard, with: .text), "No file present")
+        XCTAssertFalse(Utility.checkFileExists(for: .dashboard, with: .rich), "No file present")
+        XCTAssertFalse(Utility.checkFileExists(for: .dashboard, with: .rich), "No file present")
+        XCTAssertFalse(Utility.checkFileExists(for: .dashboard, with: .rich), "No file present")
+
     }
 
     override func tearDownWithError() throws {

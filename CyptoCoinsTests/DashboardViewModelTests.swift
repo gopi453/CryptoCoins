@@ -19,11 +19,6 @@ final class DashboardViewModelTests: XCTestCase {
         XCTAssertNotNil(viewModel.dashBoardData)
     }
 
-    func testLocalData() {
-        viewModel.getLocalData()
-        XCTAssertNotNil(viewModel.dashBoardData)
-    }
-
     func testFilterData() {
         //No filters applied
         viewModel.updateData(for: [])
@@ -39,7 +34,7 @@ final class DashboardViewModelTests: XCTestCase {
     }
 
     func testWriteOperation() {
-        XCTAssertTrue(Utility.checkFileExists(for: "dashboard", with: "json"), "No file present")
+        XCTAssertTrue(Utility.checkFileExists(for: .dashboard, with: .json), "No file present")
     }
 
     override func tearDownWithError() throws {

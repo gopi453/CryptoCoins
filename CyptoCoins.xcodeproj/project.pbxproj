@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F50651642CBF8D4D00C442BE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50651632CBF8D4D00C442BE /* UIViewController+Extensions.swift */; };
+		F50651662CBFEBEF00C442BE /* LocalCacheModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50651652CBFEBEF00C442BE /* LocalCacheModelTests.swift */; };
 		F54F55472CBE725600B21D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55462CBE725600B21D52 /* AppDelegate.swift */; };
 		F54F55492CBE725600B21D52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55482CBE725600B21D52 /* SceneDelegate.swift */; };
 		F54F554B2CBE725600B21D52 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F554A2CBE725600B21D52 /* DashBoardViewController.swift */; };
 		F54F55502CBE725700B21D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54F554F2CBE725700B21D52 /* Assets.xcassets */; };
 		F54F55532CBE725700B21D52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F54F55522CBE725700B21D52 /* Base */; };
-		F54F555E2CBE725700B21D52 /* CyptoCoinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */; };
 		F54F55682CBE725700B21D52 /* CyptoCoinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55672CBE725700B21D52 /* CyptoCoinsUITests.swift */; };
 		F54F556A2CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55692CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift */; };
 		F54F55772CBE727500B21D52 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F55762CBE727500B21D52 /* DashBoardViewModel.swift */; };
@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		F50651632CBF8D4D00C442BE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F50651652CBFEBEF00C442BE /* LocalCacheModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheModelTests.swift; sourceTree = "<group>"; };
 		F54F55432CBE725600B21D52 /* CyptoCoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyptoCoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54F55462CBE725600B21D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F54F55482CBE725600B21D52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		F54F55522CBE725700B21D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54F55542CBE725700B21D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54F55592CBE725700B21D52 /* CyptoCoinsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCoinsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsTests.swift; sourceTree = "<group>"; };
 		F54F55632CBE725700B21D52 /* CyptoCoinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCoinsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54F55672CBE725700B21D52 /* CyptoCoinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsUITests.swift; sourceTree = "<group>"; };
 		F54F55692CBE725700B21D52 /* CyptoCoinsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCoinsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -147,9 +147,9 @@
 		F54F555C2CBE725700B21D52 /* CyptoCoinsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F54F555D2CBE725700B21D52 /* CyptoCoinsTests.swift */,
 				F5B747E72CBF7390008AA053 /* DashboardViewModelTests.swift */,
 				F5B747E92CBF739F008AA053 /* CoinsFilterViewModelTests.swift */,
+				F50651652CBFEBEF00C442BE /* LocalCacheModelTests.swift */,
 			);
 			path = CyptoCoinsTests;
 			sourceTree = "<group>";
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F54F555E2CBE725700B21D52 /* CyptoCoinsTests.swift in Sources */,
+				F50651662CBFEBEF00C442BE /* LocalCacheModelTests.swift in Sources */,
 				F5B747E82CBF7390008AA053 /* DashboardViewModelTests.swift in Sources */,
 				F5B747EA2CBF739F008AA053 /* CoinsFilterViewModelTests.swift in Sources */,
 			);
@@ -667,7 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -686,7 +686,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.CyptoCoinsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -13,6 +13,7 @@ enum CoinType: String, Codable {
 }
 
 struct DashboardData: Codable, Equatable {
+    let fileName: String = "dashboard"
     let name: String
     let symbol: String
     let isNew: Bool

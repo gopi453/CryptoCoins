@@ -11,7 +11,6 @@ final class CoinsFilterViewModel {
 
     private(set) var filtersData: [CoinsFilterCollectionData] = []
     private let localStorage: LocalStorable
-    private let localJSONFileName = "coinsFilterData"
     init(localStorage: LocalStorable = LocalStorageManager()) {
         self.localStorage = localStorage
         self.filtersData = getFilterData()
@@ -28,11 +27,14 @@ final class CoinsFilterViewModel {
     }
 
     func writeData(with data: [CoinsFilterCollectionData]) {
-        self.localStorage.writeData(data, for: localJSONFileName, with: "json")
+        self.localStorage.writeData(data, for: .coinsFilter, with: .json)
     }
 
     private func getSelectedFilters() -> [CoinsFilterCollectionData]? {
-         return Utility.fetchLocalArrayData(for: localJSONFileName, decodeType: [CoinsFilterCollectionData].self)
+        guard let data = localStorage.readData(for: .coinsFilter, fileExtension: .json, decodeType: [CoinsFilterCollectionData].self), !data.isEmpty else {
+            return nil
+        }
+        return data
     }
 
 }

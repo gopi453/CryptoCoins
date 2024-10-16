@@ -42,7 +42,9 @@ class DashBoardViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         activityIndicator = self.showActivityIndicator(onView: view)
-        viewModel?.getData()
+        Task {
+            await viewModel?.getCoinsData()
+        }
     }
 
 }
@@ -58,6 +60,8 @@ private extension DashBoardViewController {
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
         ])
         viewModel?.setDelegate(delegate: self)
+        viewModel?.setLocalCache()
+
     }
 
     func setRightBarButtonItem() {
@@ -145,6 +149,7 @@ extension DashBoardViewController: CoinsFilterViewControllerDelegate {
     func didFinishSelectingFilter(with value: [CoinsFilterCollectionData]) {
         self.viewModel?.updateData(for: value)
         tableView.reloadSections(IndexSet(integersIn: 0...tableView.numberOfSections - 1), with: .automatic)
+        self.navigationItem.rightBarButtonItem?.isEnabled = self.viewModel?.dashBoardData.isEmpty != true
     }
 }
 
