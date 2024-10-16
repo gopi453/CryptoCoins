@@ -41,9 +41,3 @@ struct Utility {
     }
 
 }
-
-extension String {
-    static func fileName(_ fileName: String,_ ext: String) -> String {
-        return "\(fileName).\(ext)"
-    }
-}

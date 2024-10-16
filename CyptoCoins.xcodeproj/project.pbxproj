@@ -29,6 +29,7 @@
 		F5B747E82CBF7390008AA053 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747E72CBF7390008AA053 /* DashboardViewModelTests.swift */; };
 		F5B747EA2CBF739F008AA053 /* CoinsFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747E92CBF739F008AA053 /* CoinsFilterViewModelTests.swift */; };
 		F5B747EE2CBF75BA008AA053 /* DashBoardDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747ED2CBF75BA008AA053 /* DashBoardDataModels.swift */; };
+		F5B747F22CBF8B80008AA053 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B747F12CBF8B80008AA053 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F5B747E72CBF7390008AA053 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
 		F5B747E92CBF739F008AA053 /* CoinsFilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsFilterViewModelTests.swift; sourceTree = "<group>"; };
 		F5B747ED2CBF75BA008AA053 /* DashBoardDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardDataModels.swift; sourceTree = "<group>"; };
+		F5B747F12CBF8B80008AA053 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				F54F55462CBE725600B21D52 /* AppDelegate.swift */,
-				F5B747DF2CBEEF4E008AA053 /* LocalStorageManager.swift */,
 				F54F55482CBE725600B21D52 /* SceneDelegate.swift */,
 				F5B747D02CBEA36A008AA053 /* DashBoard */,
 				F5B747DA2CBEEADD008AA053 /* CoinsFilter */,
@@ -134,8 +135,9 @@
 				F54F554F2CBE725700B21D52 /* Assets.xcassets */,
 				F54F55512CBE725700B21D52 /* LaunchScreen.storyboard */,
 				F54F55542CBE725700B21D52 /* Info.plist */,
-				F5B747E12CBF649D008AA053 /* Utility.swift */,
-				F5B747E52CBF7175008AA053 /* UITableView+Extensions.swift */,
+				F5B747F42CBF8BAB008AA053 /* LocalStorage */,
+				F5B747F32CBF8B95008AA053 /* Utilities */,
+				F5B747F02CBF8B74008AA053 /* Extensions */,
 			);
 			path = CyptoCoins;
 			sourceTree = "<group>";
@@ -252,6 +254,31 @@
 				F5B747ED2CBF75BA008AA053 /* DashBoardDataModels.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		F5B747F02CBF8B74008AA053 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747E52CBF7175008AA053 /* UITableView+Extensions.swift */,
+				F5B747F12CBF8B80008AA053 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5B747F32CBF8B95008AA053 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747E12CBF649D008AA053 /* Utility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F5B747F42CBF8BAB008AA053 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F5B747DF2CBEEF4E008AA053 /* LocalStorageManager.swift */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +415,7 @@
 				F5B747E62CBF7175008AA053 /* UITableView+Extensions.swift in Sources */,
 				F5B747D52CBECF6F008AA053 /* CoinsFilterViewController.swift in Sources */,
 				F5B747E02CBEEF4E008AA053 /* LocalStorageManager.swift in Sources */,
+				F5B747F22CBF8B80008AA053 /* String+Extensions.swift in Sources */,
 				F5B747D72CBECF7D008AA053 /* CoinsFilterCollectionViewCell.swift in Sources */,
 				F54F55792CBE728F00B21D52 /* DashBoardAPIRepository.swift in Sources */,
 				F5B747E42CBF6E21008AA053 /* CoinDataModels.swift in Sources */,
