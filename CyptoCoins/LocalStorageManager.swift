@@ -11,7 +11,7 @@ protocol LocalStorable: AnyObject {
     func readData<T: Decodable>(for fileName: String, decodeType: T.Type) -> T?
 }
 
-class LocalStorageManager: LocalStorable {
+final class LocalStorageManager: LocalStorable {
 
     func writeData(_ data: Encodable, for fileName: String, with fileExtension: String = "json") {
         do {
