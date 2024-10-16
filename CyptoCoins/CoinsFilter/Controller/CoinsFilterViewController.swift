@@ -9,6 +9,11 @@ import UIKit
 enum CoinsFilterSection: Hashable {
     case all
 }
+
+protocol CoinsFilterViewControllerDelegate: AnyObject {
+    func didFinishSelectingFilter(with value: [CoinsFilterCollectionData])
+}
+
 class CoinsFilterViewController: UIViewController {
     private var viewModel: CoinsFilterViewModel?
     private typealias Snapshot = NSDiffableDataSourceSnapshot<CoinsFilterSection, CoinsFilterCollectionData>
@@ -22,9 +27,11 @@ class CoinsFilterViewController: UIViewController {
         collectionView.delegate = self
         return collectionView
     }()
+    private weak var delegate: CoinsFilterViewControllerDelegate?
 
-    init(viewModel: CoinsFilterViewModel? = nil) {
+    init(viewModel: CoinsFilterViewModel? = nil, delegate: CoinsFilterViewControllerDelegate? = nil) {
         self.viewModel = viewModel
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -35,6 +42,21 @@ class CoinsFilterViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupCollectionView()
+        setRightBarButtonItem()
+    }
+
+    private func setRightBarButtonItem() {
+        let rightBarButtonItem = UIBarButtonItem(title: "Done", image: nil, target: self, action: #selector(doneButtonTapped))
+        rightBarButtonItem.tintColor = .white
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+
+    @objc func doneButtonTapped() {
+        let items = self.dataSource.snapshot().itemIdentifiers
+        self.viewModel?.writeData(with: items)
+        self.dismiss(animated: true) { [weak self] in
+            self?.delegate?.didFinishSelectingFilter(with: items.filter({ $0.isSelected == true }))
+        }
     }
 
 }
@@ -78,7 +100,6 @@ private extension CoinsFilterViewController {
             }
             return .init()
         }
-
         return dataSource
     }
 

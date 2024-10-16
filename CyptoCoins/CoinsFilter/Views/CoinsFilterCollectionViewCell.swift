@@ -6,28 +6,6 @@
 //
 
 import UIKit
-enum CoinFilterOptions: Codable, CaseIterable, CustomStringConvertible {
-    case activeCoins, inactiveCoins, onlyTokens, onlyCoins, newCoins
-    var description: String {
-        switch self {
-        case .activeCoins:
-            "Active Coins"
-        case .inactiveCoins:
-            "Inactive Coins"
-        case .onlyTokens:
-            "Only Tokens"
-        case .onlyCoins:
-            "Only Coins"
-        case .newCoins:
-            "New Coins"
-        }
-    }
-}
-
-struct CoinsFilterCollectionData: Codable, Hashable {
-    var isSelected: Bool = false
-    let value: CoinFilterOptions
-}
 
 class CoinsFilterCollectionViewCell: UICollectionViewCell, ReusableCell {
 

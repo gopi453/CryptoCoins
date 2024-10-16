@@ -84,6 +84,9 @@ class DashboardTableViewCell: UITableViewCell, ReusableCell {
 
     private func setup() {
         selectionStyle = .none
+        preservesSuperviewLayoutMargins = false
+        separatorInset = UIEdgeInsets.zero
+        layoutMargins = UIEdgeInsets.zero
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.addArrangedSubview(titleLabel)
         contentStackView.addArrangedSubview(subTitleLabel)
